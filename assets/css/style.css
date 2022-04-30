@@ -1,0 +1,462 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Set size of hyperlinks */
+  a {
+      font-size: 30px
+  }
+
+
+  /* ----- START OF CSS PANDA ----- */
+  
+  .pandacontainer {
+    height: 31vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrapper {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    background: conic-gradient(
+      #a2d288 90deg,
+      #92ba7c 90deg 180deg,
+      #a2d288 180deg 270deg,
+      #92ba7c 270deg
+    );
+    background-position: top left;
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 10px #0000002b;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .controls input {
+    display: none;
+  }
+  
+  .body {
+    height: 80px;
+    width: 45%;
+    position: absolute;
+    bottom: -2%;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #f4f4f4;
+    border-radius: 50% 50% 0 0;
+  }
+  
+  .head {
+    height: 160px;
+    width: 70%;
+    border-radius: 50% 50% 40% 40%;
+    position: absolute;
+    z-index: 5;
+    bottom: 35px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #f4f4f4;
+    overflow: hidden;
+  }
+  
+  .ears {
+    display: flex;
+    gap: 3.5rem;
+    position: absolute;
+    bottom: 135px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .ear {
+    height: 70px;
+    width: 70px;
+    background-color: #2b2b2b;
+    border-radius: 50%;
+    transform-origin: center;
+    transform-box: fill-box;
+    display: grid;
+    place-items: center;
+  }
+  
+  .ear::before {
+    content: "";
+    height: 50%;
+    width: 50%;
+    background-color: #636363;
+    border-radius: 50%;
+  }
+  
+  .eyes {
+    display: flex;
+    gap: 3rem;
+    position: absolute;
+    bottom: 60px;
+    right: 50%;
+    z-index: 3;
+    transform: translateX(50%);
+  }
+  
+  .eyes::before {
+    content: "";
+    height: 25px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #ffc0cb;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+  }
+  .eyes::after {
+    content: "";
+    height: 25px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #ffc0cb;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+  }
+  
+  .eye {
+    height: 60px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #4c4c4c;
+    z-index: 5;
+    position: relative;
+  }
+  .eye::before {
+    content: "";
+    height: 60%;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background-color: #000000;
+  }
+  
+  .eye::after {
+    content: "";
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    border-radius: 50%;
+    background-color: #ffffff69;
+  }
+  
+  .nose {
+    position: absolute;
+    bottom: 50px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .shape {
+    height: 22px;
+    width: 22px;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transform-box: fill-box;
+    background-color: #000000;
+    border-radius: 100% 10px 10px 10px;
+    position: relative;
+  }
+  
+  .mouth {
+    height: 20px;
+    width: 25px;
+    border-bottom: 10px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .pads {
+    display: flex;
+    gap: 2.5rem;
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    z-index: 5;
+    transform: translateX(50%);
+  }
+  .pad {
+    height: 40px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #212121;
+  }
+  /* ----- END OF CSS PANDA ----- */  
+
+  /* ----- START OF BODY ----- */
+
+  /* Set a background color */
+  body {
+    background-color:#556;
+    background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), 
+    linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+    background-size:80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+
+  /* ----- END OF BODY ----- */
+
+  /* ----- START OF FOOTER ----- */
+  
+  #footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:10%;
+    width:100%;
+    background:#999;
+    font-size: 60px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #myBtn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  #myBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: #999;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+  }
+  
+  /* The Close Button */
+  .close {
+    color: red;
+    float: right;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+
+  /* ----- END OF FOOTER ----- */

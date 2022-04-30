@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Greeting!</title>
+<link rel="stylesheet" href="assets\css\style.css">
+</head>
+
+<body>
+<div class="pandacontainer">
+  <div class="wrapper">
+    <div class="ears">
+      <div class="ear"></div>
+      <div class="ear"></div>
+    </div>
+    <div class="head">
+      <div class="mustaches">
+        <div class="mus">
+          <div class="mustach"></div>
+          <div class="mustach"></div>
+          <div class="mustach"></div>
+        </div>
+        <div class="mus">
+          <div class="mustach"></div>
+          <div class="mustach"></div>
+          <div class="mustach"></div>
+        </div>
+
+      </div>
+      <div class="eyes">
+        <div class="eye"></div>
+        <div class="eye"></div>
+      </div>
+
+      <div class="nose">
+        <div class="shape"></div>
+      </div>
+      <div class="mouth"></div>
+    </div>
+    <div class="body"></div>
+    <div class="pads">
+      <div class="pad"></div>
+      <div class="pad"></div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <div class="runbuddydemo">
+        <a href="https://empathyrecoveryblitz.github.io/Run_Buddy/">Run Buddy</a>
+        <p>A website that offers fitness training services.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <a href="https://empathyrecoveryblitz.github.io/Code-Refactor/">Horiseon</a>
+      <p>A website that offers SEO services.</p>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <div class="offthehook">
+        <a href="https://jonghwa101.github.io/off-the-hook/">Off The Hook</a>
+        <p>This projects allows for you to randomly generate an excuse and meme to send to your boss, family, or even friends.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+<footer id="footer">
+  <button id="myBtn">Click me to learn more</button>
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <p>Kevin Parrinello</p>
+      </div>
+      <p>About me: <br>
+        FullStack Developer in training! HTML, CSS, and JS. <br>
+        <a href="mailto:github@busk.ai">Contact Me</a>
+      </p>
+    </div>
+  </div>
+  
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+</footer>
